@@ -1,3 +1,8 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/_utilities.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+form .required .form-label::after{
+  content:"*";
+  color:red;
+}
+
+
+.emp-card-info p{
+  @media screen and (max-width: 500px) {
+    font-size: 1rem !important;
+  }
+    
 }
