@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/employee_mgmt_react_CRUD/static/css/main.c4c971b1.css",
-    "main.js": "/employee_mgmt_react_CRUD/static/js/main.89e27189.js",
+    "main.js": "/employee_mgmt_react_CRUD/static/js/main.f20fc3e0.js",
     "index.html": "/employee_mgmt_react_CRUD/index.html",
     "main.c4c971b1.css.map": "/employee_mgmt_react_CRUD/static/css/main.c4c971b1.css.map",
-    "main.89e27189.js.map": "/employee_mgmt_react_CRUD/static/js/main.89e27189.js.map"
+    "main.f20fc3e0.js.map": "/employee_mgmt_react_CRUD/static/js/main.f20fc3e0.js.map"
   },
   "entrypoints": [
     "static/css/main.c4c971b1.css",
-    "static/js/main.89e27189.js"
+    "static/js/main.f20fc3e0.js"
   ]
 }
