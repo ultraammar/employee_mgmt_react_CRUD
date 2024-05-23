@@ -8,7 +8,7 @@ const EmpListing = ({useCards}) => {
   
   const handleDelete = (id) =>{
       
-    fetch(`http://localhost:8000/employees/${id}`, {
+    fetch(`https://employee-mgmt-react-crud-data.onrender.com/employees/${id}`, {
         method: "DELETE"
     }).then(() => {
         window.location.reload();
@@ -18,7 +18,7 @@ const EmpListing = ({useCards}) => {
   useEffect(() => {
       setIsPending(true);
       const abortContr = new AbortController();
-      fetch('http://localhost:8000/employees', {signal: abortContr.signal})
+      fetch('https://employee-mgmt-react-crud-data.onrender.com/employees', {signal: abortContr.signal})
       .then(res => {
         if(!res.ok){
           throw Error('couldn not retrieve the employee.');
@@ -63,7 +63,7 @@ const EmpListing = ({useCards}) => {
           <div className="p-5 mb-4 bg-body-tertiary rounded-3 border border-2 border-black border-opacity-50 shadow">
               <div className="container-fluid py-5 " style={{textAlign:"left"}}>
                   <h1 className="display-4 fw-semibold ">{emp.firstName + ' ' + emp.lastName}</h1>
-                  <p className="col-md-8 fs-4">{emp.email} | {emp.phone} | {emp.address}</p>
+                  <p className="col-md-8 fs-sm-5 fs-lg-4">{emp.email} | {emp.phone} | {emp.address}</p>
                   <div className="col-md-12 col-sm-12 col-lg-10 my-4">
                     <div className=" gap-1 mx-1 d-flex">
                       <Link to={`/employees/${emp.id}/edit`} className="btn  btn-success col-lg-3">Edit</Link>

@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import EmpListing from './EmpListing';
 import Navbar from './Navbar';
 import EmpEdit from './EmpEdit';
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <div className=' '>
-        <BrowserRouter>
+        <HashRouter>
           <Navbar handleChange={handleChange}/>
           <Routes>
             <Route path="/" element={<EmpListing useCards={useCards}/>} />
@@ -29,7 +29,7 @@ function App() {
             <Route path="/employees/:id/edit" element={<EmpEdit />} />
             <Route path="/employees/:id" element={<EmpDetails />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
       
       

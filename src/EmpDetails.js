@@ -11,7 +11,7 @@ const EmpDetails = () => {
   useEffect(() => {
     setIsPending(true);
     const abortContr = new AbortController();
-    fetch(`http://localhost:8000/employees/${id}`, {signal: abortContr.signal})
+    fetch(`https://employee-mgmt-react-crud-data.onrender.com/employees/${id}`, {signal: abortContr.signal})
     .then(res => {
         if(!res.ok){
             throw Error('couldn not retrieve the employee.');
@@ -33,7 +33,7 @@ const EmpDetails = () => {
 
 
     const handleDelete = () =>{
-        fetch(`http://localhost:8000/employees/${id}`, {
+        fetch(`https://employee-mgmt-react-crud-data.onrender.com/employees/${id}`, {
             method: "DELETE"
         }).then(() => {
             navigate('/');

@@ -19,7 +19,7 @@ const EmpEdit = () => {
   useEffect(() => {
     setIsPending(true);
     const abortContr = new AbortController();
-    fetch(`http://localhost:8000/employees/${id}`, {signal: abortContr.signal})
+    fetch(`https://employee-mgmt-react-crud-data.onrender.com/employees/${id}`, {signal: abortContr.signal})
     .then(res => {
         if(!res.ok){
             throw Error('couldn not retrieve the employee.');
@@ -54,7 +54,7 @@ const EmpEdit = () => {
     e.preventDefault();
     const empNew = {firstName, lastName, email, phone, address, isActive};
     setIsPending(true);
-    fetch('http://localhost:8000/employees/'+emp.id, {
+    fetch('https://employee-mgmt-react-crud-data.onrender.com/employees/'+emp.id, {
         method: "PATCH",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(empNew)

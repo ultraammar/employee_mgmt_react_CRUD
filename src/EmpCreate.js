@@ -15,7 +15,7 @@ const EmpCreate = () => {
         e.preventDefault();
         const emp = {firstName, lastName, email, phone, address, isActive};
         setIsPending(true);
-        fetch('http://localhost:8000/employees', {
+        fetch('https://employee-mgmt-react-crud-data.onrender.com/employees', {
 
             method: 'POST',
             headers: {"Content-Type": "application/json"},
